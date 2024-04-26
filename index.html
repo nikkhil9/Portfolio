@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POrtfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/4a1b5f6784.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>WEB Developer</p>
+                <h1>Hi, I'm <span>Nikhil</span><br>From India</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="images/img1.png">
+                </div>
+                <div class="about-col2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>As a skilled web developer and competitive coder, i thrive on the exhilarating challenges of
+                        crafting elegant code and solving complex problems. My passion for technology is palpable,
+                        evident in my meticulous attention to detail and my relentless pursuit of innovation. My
+                        versatile skill set and insatiable curiosity define my journey in the ever-evolving world of
+                        programming.</p>
+                    <div class="titles">
+                        <p class="links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="links" onclick="opentab('experiance')">Experience</p>
+                        <p class="links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="contents active-tab" id="skills">
+                        <ul>
+                            <li><span>WEB Developer</span><br>Developing web interfaces</li>
+                            <li><span>Competitive Programmer</span><br>Programming through C++</li>
+                            <li><span>UI/UX</span><br>Designing web interfaces</li>
+                        </ul>
+
+                    </div>
+                    <div class="contents" id="experiance">
+                        <ul>
+                            <li><span>Hackathon</span><br>Attended some hackathon at various colleges </li>
+                            <li><span>GOOGLE</span><br>Acheived some badges of completion at google cloud</li>
+                        </ul>
+
+                    </div>
+                    <div class="contents" id="education">
+                        <ul>
+                            <li><span>2020</span><br>SSC education with 10CGPA</li>
+                            <li><span>2022</span><br>Intermediate with 9.2CGPA</li>
+                            <li><span>2022-2026</span><br>Still pursuing Btech at VIgnan</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="containeer">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-html5"></i>
+                    <h2>Web Development</h2>
+                    <p>I'm proficient in web development, crafting dynamic, user-friendly websites using HTML, CSS, and
+                        JavaScript for the frontend, ensuring responsive and engaging online experiences.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Competetive Programmer</h2>
+                    <p>As a competitive programmer using C++, I harness the power of its STL and efficient algorithms to
+                        solve complex problems swiftly, aiming for optimized solutions that outperform at global
+                        contests.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-spray-can"></i>
+                    <h2>UI/UX Designer</h2>
+                    <p>As a UI/UX designer specializing in Figma, I craft intuitive and visually compelling digital
+                        experiences. My focus on user-centered design principles ensures seamless, impactful
+                        interactions across all digital platforms.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-lest">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        nikhiladapureddy@gmail.com
+                    </p>
+                    <p><i class="fa-solid fa-phone"></i>9346897180</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100086664663582"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/__thenikk/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/nikhil-adapureddy-61118a263/"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/nikkhil9"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="images/modelCV.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Created by Nikhil Adapureddy. © 2024</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("links");
+        var tabcontents = document.getElementsByClassName("contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidmenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidmenu.style.right = "0";
+        }
+        function closemenu() {
+            sidmenu.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>
